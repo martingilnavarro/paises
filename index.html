@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <link href="./style.css" rel="stylesheet">
+    <style>
+        h2 {
+            color:blueviolet;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1 class="uppercase"> Países </h1>
+    <div id="informacion">
+        
+        <p class="descripcion uppercase"> En esta sección se describirá la <strong>población</strong> que tiene cada país, 
+            su <em>superficie</em>, su capital y su bandera. </p>
+        <button> Hace click a ver que país te toca </button> <br><br>
+        <button id="agrandarBandera"> Agrandar bandera de Argentina </button> <br><br>
+
+        <a href="#rankings"> Ver Ranking de Población </a>
+
+        <!-- Empieza el listado de los países -->
+
+        <h3 style="color:white; background-color: lightskyblue"> Argentina </h3>
+        <ul>
+            <li> Población: 47.327.407</li>
+            <li> Superficie[km2]: 2.780.400</li>
+            <li> Capital: <a href="https://en.wikipedia.org/wiki/Buenos_Aires" target="_blank"> Buenos Aires </a> </li>
+            <li> Bandera: 
+                <a href="https://en.wikipedia.org/wiki/Flag_of_Argentina" target="_blank">
+                <img src="./imagenes/Bandera_Argentina.png" alt="Bandera Argentina" width="20" id="banderaArgentina"> </a> </li>
+        </ul>
+
+        <h3 style="color:green; background-color: yellow;"> Brasil </h3>
+        <ul>
+        <li> Población: 214.047.375</li>
+        <li> Superficie[km2]: 8.515.767</li>
+        <li> Capital: <a href ="https://en.wikipedia.org/wiki/Bras%C3%ADlia" target="_blank"> Brasilia </a> </li>
+        <li> Bandera:
+            <a href="https://en.wikipedia.org/wiki/Flag_of_Brazil" target="_blank">
+            <img src="./imagenes/Bandera_Brasil.png" alt="Bandera Brasil" width="20"> </a> </li>
+        </ul>
+
+        <h3 style="color:white; background-color: blue"> Uruguay </h3>
+        <ul>
+        <li> Población: 3.518.552</li>
+        <li> Superficie[km2]: 181.034</li>
+        <li> Capital: <a href ="https://en.wikipedia.org/wiki/Montevideo" target="_blank"> Montevideo </a> </li>
+        <li> Bandera: 
+            <a href="https://en.wikipedia.org/wiki/Flag_of_Uruguay" target="_blank">
+            <img src="./imagenes/Bandera_Uruguay.png" alt="Bandera Uruguay" width="20"/> </a> </li>
+        </ul>
+
+        <h3 style="color:white; background-color: red"> Paraguay </h3>
+        <ul>
+            <li> Población: 7.359.000</li>
+            <li> Superficie[km2]: 406.796</li>
+            <li> Capital: <a href="https://en.wikipedia.org/wiki/Asunci%C3%B3n" target="_blank"> Asunción </a> </li>
+            <li> Bandera: 
+                <a href="https://en.wikipedia.org/wiki/Flag_of_Paraguay" target="_blank">
+                <img src="./imagenes/Bandera_Paraguay.png" alt="Bandera Paraguay" width="20"> </a> </li>
+            </ul>
+    </div>
+    <div id = "agregar pais">
+        <form action ="./formpage.html" method="POST">
+            <h1> Agregar un País</h1>
+            <h3> Ingresar los datos para agregar un país </h3>
+
+            <label for="nombrePais">Nombre del País: </label>
+            <input type="text" name="nombrePais" id="nombrePais">
+            <hr>
+            <label for="poblacion">Población: </label>
+            <input type="number" name="poblacion" id="poblacion">
+            <hr>
+            <span>Continente: </span><br>
+            <input type="radio" name="continent" id="america" value="america">
+            <label for="america">América</label>
+            <input type="radio" name="continent" id="europa" value="europa">
+            <label for="europa">Europa</label>
+            <input type="radio" name="continent" id="asia" value="asia">
+            <label for="asia">Asia</label>
+            <input type="radio" name="continent" id="africa" value="africa">
+            <label for="africa">África</label>
+            <input type="radio" name="continent" id="oceania" value="oceania">
+            <label for="oceania">Oceanía</label>
+            <hr>
+            <label for="descripcion">Descripción del País:</label><br>
+            <textarea id="descripcion" name="descripcion" rows="4" cols="30"></textarea>
+            <hr>
+            <input type="submit" value="Agregar País">
+
+        </form>
+    </div>
+    <div id="rankings">
+        <h2> Ranking por Población </h2>
+        <ol>
+            <li id="mayor_poblacion"> Brasil </li>
+            <li> Argentina </li>
+            <li> Paraguay </li>
+            <li> Uruguay </li>
+        </ol>
+    </div>
+    <script src="./java.js"></script>
+</body>
+</html>
